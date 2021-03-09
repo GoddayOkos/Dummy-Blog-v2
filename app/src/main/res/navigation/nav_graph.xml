@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/postsFragment">
+    <fragment
+        android:id="@+id/postsFragment"
+        android:name="dev.decagon.godday.dummyblogfragments.ui.PostsFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_posts"/>
+    <fragment
+        android:id="@+id/commentsFragment"
+        android:name="dev.decagon.godday.dummyblogfragments.ui.CommentsFragment"
+        android:label="@string/comment_header"
+        tools:layout="@layout/fragment_comments"/>
+</navigation>

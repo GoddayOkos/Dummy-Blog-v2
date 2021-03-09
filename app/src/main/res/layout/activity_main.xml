@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    tools:context=".ui.MainActivity">
+
+<!--   <com.google.android.material.appbar.AppBarLayout-->
+<!--       android:layout_width="match_parent"-->
+<!--       android:id="@+id/appbar"-->
+<!--       android:layout_height="wrap_content"-->
+<!--       android:theme="@style/Theme.DummyBlogFragments.AppBarOverlay"-->
+<!--       app:layout_constraintTop_toTopOf="parent"-->
+<!--       app:layout_constraintStart_toStartOf="parent"-->
+<!--       app:layout_constraintEnd_toEndOf="parent">-->
+
+<!--      <androidx.appcompat.widget.Toolbar-->
+<!--          android:id="@+id/toolbar"-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="?attr/actionBarSize"-->
+<!--          app:popupTheme="@style/Theme.DummyBlogFragments.PopupOverlay"-->
+<!--          android:background="?attr/colorPrimary" >-->
+
+<!--         <com.google.android.material.textfield.TextInputLayout-->
+<!--             android:layout_width="150dp"-->
+<!--             android:layout_height="50dp"-->
+<!--             android:visibility="gone"-->
+<!--             android:layout_marginStart="170dp"-->
+<!--             android:id="@+id/text_field"-->
+<!--             app:endIconMode="custom"-->
+<!--             android:gravity="center"-->
+<!--             android:focusable="false"-->
+<!--             app:endIconDrawable="@drawable/ic_baseline_search_24" >-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:gravity="center"-->
+<!--                android:inputType="number"-->
+<!--                android:textColor="@color/black"/>-->
+<!--         </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--      </androidx.appcompat.widget.Toolbar>-->
+
+<!--   </com.google.android.material.appbar.AppBarLayout>-->
+
+   <androidx.fragment.app.FragmentContainerView
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       android:id="@+id/nav_host_fragment"
+       android:name="androidx.navigation.fragment.NavHostFragment"
+       app:navGraph="@navigation/nav_graph"
+       app:defaultNavHost="true"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
