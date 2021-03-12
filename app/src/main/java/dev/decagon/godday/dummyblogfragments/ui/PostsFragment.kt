@@ -5,6 +5,7 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.navOptions
 import dev.decagon.godday.dummyblogfragments.R
 import dev.decagon.godday.dummyblogfragments.adapter.PostAdapter
 import dev.decagon.godday.dummyblogfragments.databinding.FragmentPostsBinding
@@ -49,6 +50,15 @@ class PostsFragment : Fragment() {
             postFragment = this@PostsFragment
         }
 
+        val options = navOptions {
+            anim {
+                enter = R.anim.slide_in_right
+                exit = R.anim.slide_out_left
+                popEnter = R.anim.slide_in_left
+                popExit = R.anim.slide_out_right
+            }
+        }
+
         /**
          * Initialize and setup the recyclerview adapter, implement the click listener
          * which it takes as a parameter, define the logic for navigating to the next
@@ -56,7 +66,7 @@ class PostsFragment : Fragment() {
          */
         adapter = PostAdapter(PostAdapter.OnClickListener{
             sharedViewModel.setPost(it)
-            findNavController().navigate(R.id.commentsFragment)
+            findNavController().navigate(R.id.commentsFragment, null, options)
         })
     }
 
